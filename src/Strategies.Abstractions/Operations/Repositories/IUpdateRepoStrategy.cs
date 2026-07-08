@@ -6,7 +6,7 @@ namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositorie
 
 using System.Linq.Expressions;
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories;
-using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.Capabilities;
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests;
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders;
 
 public interface IUpdateRepoStrategy<in TService, TEntity> :

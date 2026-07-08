@@ -3,7 +3,7 @@
 // </copyright>
 
 #pragma warning disable CS8618 // Non-nullable field required to allow url route ids to be mapped into body payloads
-namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.Capabilities;
+namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests;
 
 using System.ComponentModel;
 

@@ -2,7 +2,7 @@
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 
-namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Responses;
+namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Responses.Pagination;
 
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Pagination;
 

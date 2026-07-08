@@ -4,7 +4,7 @@
 
 namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders;
 
-using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.Capabilities;
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests;
 using Microsoft.Extensions.Logging;
 
 public interface IConflictRulesBuilder<in TService, T>

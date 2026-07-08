@@ -6,8 +6,8 @@ namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositorie
 
 using System.Linq.Expressions;
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories;
-using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.Queries;
-using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Responses;
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.Pagination;
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Responses.Pagination;
 
 public interface
     IGetPagedRepoStrategy<in TService, TEntity> :

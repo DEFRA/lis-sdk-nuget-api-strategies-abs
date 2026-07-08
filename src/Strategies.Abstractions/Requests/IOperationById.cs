@@ -2,7 +2,7 @@
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 
-namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.Capabilities;
+namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests;
 
 public interface IOperationById<T> : ILoggableById
 {
