@@ -1,0 +1,22 @@
+<Project>
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+
+  <!-- Packability-->
+  <PropertyGroup>
+    <IsPackable>True</IsPackable>
+  </PropertyGroup>
+
+  <!-- Package Information-->
+  <PropertyGroup>
+    <Title>Defra Livestock API SDK - Strategies / Abstractions</Title>
+    <Description>Strategy abstractions for Defra.Livestock.Sdk.Api.Strategies</Description>
+    <RepositoryUrl>https://github.com/DEFRA/lis-sdk-nuget-api-strategies-abs</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <!-- Version Information-->
+  <PropertyGroup>
+    <Version>0.1.0-prerelease.1</Version>
+  </PropertyGroup>
+  
+</Project>
