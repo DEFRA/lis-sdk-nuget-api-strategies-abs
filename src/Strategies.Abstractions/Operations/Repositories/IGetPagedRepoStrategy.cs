@@ -6,6 +6,7 @@ namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositorie
 
 using System.Linq.Expressions;
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories;
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Pagination;
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.Pagination;
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Responses.Pagination;
 
@@ -23,8 +24,15 @@ public interface
 
     IGetPagedRepoStrategy<TService, TEntity> WithEntityFilter(Expression<Func<TEntity, bool>> entityFilter);
 
+    Task<PagedEntities<TEntity>> Execute<TOrderBy>(Expression<Func<TEntity, TOrderBy>> orderBy);
+
     Task<PagedResults<TResult>> ExecuteAndMap<TResult, TOrderBy>(
         Func<TEntity, TResult> map,
+        Expression<Func<TEntity, TOrderBy>> orderBy)
+        where TResult : class;
+
+    Task<TResult> ExecuteAndTransform<TResult, TOrderBy>(
+        Func<PagedEntities<TEntity>, TResult> transform,
         Expression<Func<TEntity, TOrderBy>> orderBy)
         where TResult : class;
 }

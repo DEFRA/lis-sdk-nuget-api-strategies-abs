@@ -17,6 +17,11 @@ public interface
 
     IGetListRepoStrategy<TService, TEntity> WithEntityFilter(Expression<Func<TEntity, bool>> entityFilter);
 
+    Task<List<TEntity>> Execute();
+
     Task<List<TResult>> ExecuteAndMap<TResult>(Func<TEntity, TResult> map)
+        where TResult : class;
+
+    Task<TResult> ExecuteAndTransform<TResult>(Func<List<TEntity>, TResult> transform)
         where TResult : class;
 }
