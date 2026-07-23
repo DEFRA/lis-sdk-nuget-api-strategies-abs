@@ -23,6 +23,8 @@ public interface IGetRepoStrategy<in TService, TEntity> :
 
     IGetRepoStrategy<TService, TEntity> WithExistenceRules(Action<IExistenceRulesBuilder<TService, TEntity>> builder);
 
+    Task<TEntity> Execute();
+
     Task<TResult> ExecuteAndMap<TResult>(Func<TEntity, TResult> map)
         where TResult : class;
 }
