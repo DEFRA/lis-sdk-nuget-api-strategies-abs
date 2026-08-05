@@ -21,12 +21,12 @@ jobs:
     environment: release
     steps:
       - name: Setup .NET
-        uses: actions/setup-dotnet@f774ee9ad66d03d0d8291410f9ba6c1d7311749d # v4.3.0
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '10.0.x'
 
       - name: Download NuGet packages
-        uses: actions/download-artifact@cc206ee5b192e483a3e0c47d8c7cf044ffbed8f4 # v4.1.9
+        uses: actions/download-artifact@v4
         with:
           name: nuget-packages
           path: artifacts
