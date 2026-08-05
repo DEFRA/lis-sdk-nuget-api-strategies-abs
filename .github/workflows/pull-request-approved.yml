@@ -5,7 +5,7 @@ on:
     types: [submitted]
 
 permissions:
-  contents: write
+  contents: read
   id-token: write
 
 jobs:
@@ -23,6 +23,8 @@ jobs:
     needs: get-version
     if: github.event.review.state == 'approved'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
