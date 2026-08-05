@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
   
 permissions:
-  contents: write
+  contents: read
   id-token: write
 
 jobs:
@@ -26,6 +26,8 @@ jobs:
     name: "Create Git Tag"
     needs: get-version
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
