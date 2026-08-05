@@ -21,19 +21,19 @@ jobs:
     environment: release
     steps:
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@cb9b7d9988dca51f32d98565a0447fa373f6b147 # v4.3.0
         with:
           dotnet-version: '10.0.x'
 
       - name: Download NuGet packages
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@cc206ee5b192e483a3e0c47d8c7cf044ffbed8f4 # v4.1.9
         with:
           name: nuget-packages
           path: artifacts
 
       - name: NuGet trusted publishing login
         id: nuget-login
-        uses: NuGet/login@8d196754b4036150537f80ac539e15c2f1028841 # v1
+        uses: NuGet/login@8d196754b4036150537f80ac539e15c2f1028841 # v1.0.3
         with:
           user: ${{ secrets.NUGET_USERNAME }}
 
