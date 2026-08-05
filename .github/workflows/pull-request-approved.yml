@@ -6,7 +6,6 @@ on:
 
 permissions:
   contents: read
-  id-token: write
 
 jobs:
   get-version:
@@ -76,6 +75,8 @@ jobs:
     name: "Publish to NuGet"
     needs: [get-version, build-pack, sonar-analysis, create-tag]
     if: github.event.review.state == 'approved' && needs.sonar-analysis.outputs.quality-gate-status == 'PASSED'
+    permissions:
+      id-token: write
     uses: ./.github/workflows/publish.yml
     with:
       version: ${{ needs.get-version.outputs.version }}
