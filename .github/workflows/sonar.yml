@@ -70,5 +70,5 @@ jobs:
         with:
           scanMetadataReportFile: ${{ steps.report_task.outputs.path }}
         env:
-          LIS_SONAR_TOKEN: ${{ secrets.LIS_SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.LIS_SONAR_TOKEN }}
           SONAR_HOST_URL: https://sonarcloud.io
