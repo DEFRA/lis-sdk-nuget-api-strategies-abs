@@ -1,14 +1,14 @@
-﻿// <copyright file="IRepoStrategy.cs" company="Defra">
+﻿// <copyright file="IStrategy.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 
-namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories;
+namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base;
 
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context;
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation;
 using Microsoft.Extensions.Logging;
 
-public interface IRepoStrategy<in TService, out TParent>
+public interface IStrategy<in TService, out TParent>
     where TService : class
     where TParent : class
 {
@@ -19,8 +19,6 @@ public interface IRepoStrategy<in TService, out TParent>
     TParent WithOperatorContext(IOperatorContext operatorContext);
 
     TParent WithRequiresAuthenticatedOperator();
-
-    TParent WithEntityDescription(string entityDescription);
 
     TParent WithActionDescription(string actionDescription);
 

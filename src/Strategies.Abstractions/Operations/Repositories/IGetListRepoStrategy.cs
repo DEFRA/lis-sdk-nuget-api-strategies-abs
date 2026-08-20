@@ -5,6 +5,7 @@
 namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories;
 
 using System.Linq.Expressions;
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.Base;
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories;
 
 public interface

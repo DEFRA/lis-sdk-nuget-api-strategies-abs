@@ -4,17 +4,12 @@
 
 namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations;
 
-using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context;
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base;
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories;
-using Microsoft.Extensions.Logging;
 
-public interface IRepoStrategyFactory<in TService>
+public interface IRepoStrategyFactory<in TService> : IStrategyFactory<TService, IRepoStrategyFactory<TService>>
     where TService : class
 {
-    IRepoStrategyFactory<TService> WithDefaultLogger(ILogger<TService> logger);
-
-    IRepoStrategyFactory<TService> WithDefaultOperatorContext(IOperatorContext operatorContext);
-
     IRepoStrategyFactory<TService> WithDefaultEntityDescription(string entityDescription);
 
     ICreateRepoStrategy<TService, TEntity> BuildCreateStrategy<TEntity>()
