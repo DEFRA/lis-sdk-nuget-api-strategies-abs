@@ -14,9 +14,9 @@
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
-  <!-- Version Information-->
+  <!-- Local Version Information-->
   <PropertyGroup>
-    <Version>0.4.0-prerelease.1</Version>
+    <Version>0.6.0-prerelease.1</Version>
   </PropertyGroup>
   
 </Project>

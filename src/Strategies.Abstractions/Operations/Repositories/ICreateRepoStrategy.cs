@@ -4,6 +4,7 @@
 
 namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories;
 
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.Base;
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories;
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders;
 
