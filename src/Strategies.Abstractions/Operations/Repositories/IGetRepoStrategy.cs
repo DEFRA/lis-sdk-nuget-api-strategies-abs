@@ -16,7 +16,7 @@ public interface IGetRepoStrategy<in TService, TEntity> :
     where TEntity : class
 {
     IGetRepoStrategy<TService, TEntity> WithRepository<TRepository>(TRepository repository)
-        where TRepository : IRepoGettable<TEntity>, IRepoUpdatable<TEntity>;
+        where TRepository : IRepoGettable<TEntity>;
 
     IGetRepoStrategy<TService, TEntity> WithRequest(ILoggableById request);
 

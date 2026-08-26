@@ -4,9 +4,6 @@
 
 namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions;
 
-using System.Diagnostics.CodeAnalysis;
-
-[ExcludeFromCodeCoverage]
 public sealed class BusinessRuleException : Exception
 {
     public BusinessRuleException(string message)
