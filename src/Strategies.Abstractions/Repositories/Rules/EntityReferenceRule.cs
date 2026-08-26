@@ -4,11 +4,10 @@
 
 namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Rules;
 
-using System.Diagnostics.CodeAnalysis;
 using System.Linq.Expressions;
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories;
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules;
 
-[ExcludeFromCodeCoverage]
 public class EntityReferenceRule<TEntity> : IReferenceRule
     where TEntity : class
 {
@@ -17,9 +16,9 @@ public class EntityReferenceRule<TEntity> : IReferenceRule
         Expression<Func<TEntity, bool>> predicate,
         string description)
     {
-        this.Description = description;
-        this.Predicate = predicate;
-        this.Repository = repository;
+        Description = description;
+        Predicate = predicate;
+        Repository = repository;
     }
 
     public string Description { get; }
