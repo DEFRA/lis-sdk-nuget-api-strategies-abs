@@ -14,6 +14,8 @@ public interface IHttpStrategy<in TService, out TParent> : IStrategy<TService, T
 
     TParent WithBaseUrl(string baseUrl);
 
+    TParent WithBasicAuth(string username, string password);
+
     TParent WithHeader(string name, string value);
 
     TParent WithMediaType(string mediaType);

@@ -30,6 +30,8 @@ public interface
 
     IRestStrategy<TService> WithQueryParameter(string name, string value);
 
+    IRestStrategy<TService> WithQueryParameter(Func<bool> expression, string name, string value);
+
     IRestStrategy<TService> WithQueryParameters(IDictionary<string, string> queryParameters);
 
     IRestStrategy<TService> WithPayload<TRequest>(Func<TRequest> payloadAction);
