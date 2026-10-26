@@ -14,9 +14,13 @@ public interface IHttpStrategyFactory<in TService, out TParent> : IStrategyFacto
 
     TParent WithDefaultBaseUrl(string baseUrl);
 
-    TParent WithDefaultMediaType(string mediaType);
+    TParent WithDefaultApiKey(string apiKey);
 
     TParent WithDefaultBasicAuth(string username, string password);
+
+    TParent WithDefaultMediaType(string mediaType);
+
+    TParent WithDefaultTimeout(int timeoutMs);
 
     TParent WithDefaultVerboseOutput(Action<string, string?> verboseOutputAction);
 }
