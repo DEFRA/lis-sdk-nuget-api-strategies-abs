@@ -21,5 +21,7 @@ public interface ISoapHttpClient
 
     ISoapHttpClient WithXmlDeclaration(bool includeXmlDeclaration);
 
+    ISoapHttpClient WithTimeout(int timeoutMs);
+
     Task<SoapResponse> PostAsync(string relativeUrl, XElement payload, CancellationToken cancellationToken = default);
 }

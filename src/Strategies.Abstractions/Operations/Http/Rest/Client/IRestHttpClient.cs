@@ -19,6 +19,8 @@ public interface IRestHttpClient
 
     IRestHttpClient WithQueryParameter(string name, string value);
 
+    IRestHttpClient WithTimeout(int timeoutMs);
+
     Task<RestResponse> SendAsync(
         HttpMethod httpMethod,
         string? relativeUrl,
