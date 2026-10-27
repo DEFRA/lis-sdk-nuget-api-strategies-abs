@@ -16,6 +16,8 @@ public interface IHttpStrategy<in TService, out TParent> : IStrategy<TService, T
 
     TParent WithApiKey(string apiKey);
 
+    TParent WithApiKey(Func<bool> expression, string apiKey);
+
     TParent WithBasicAuth(string username, string password);
 
     TParent WithHeader(string name, string value);

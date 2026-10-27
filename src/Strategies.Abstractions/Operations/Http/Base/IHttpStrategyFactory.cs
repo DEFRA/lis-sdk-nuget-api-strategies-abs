@@ -16,6 +16,8 @@ public interface IHttpStrategyFactory<in TService, out TParent> : IStrategyFacto
 
     TParent WithDefaultApiKey(string apiKey);
 
+    TParent WithDefaultApiKey(Func<bool> expression, string apiKey);
+
     TParent WithDefaultBasicAuth(string username, string password);
 
     TParent WithDefaultMediaType(string mediaType);
