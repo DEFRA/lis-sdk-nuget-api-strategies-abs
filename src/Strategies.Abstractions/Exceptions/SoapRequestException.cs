@@ -4,7 +4,7 @@
 
 namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions;
 
-public sealed class SoapRequestException : Exception
+public sealed class SoapRequestException : HttpRequestException
 {
     public SoapRequestException(string message)
         : base(message)
