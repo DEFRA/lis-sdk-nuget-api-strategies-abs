@@ -1,4 +1,4 @@
-// <copyright file="SoapSchemaExceptionTests.cs" company="Defra">
+// <copyright file="SoapSchemaBuilderExceptionTests.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 
@@ -8,7 +8,7 @@ using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions;
 using Shouldly;
 using Xunit;
 
-public class SoapSchemaExceptionTests
+public class SoapSchemaBuilderExceptionTests
 {
     [Fact]
     public void Constructor_WithMessage_ShouldSetMessageProperty()
@@ -17,7 +17,7 @@ public class SoapSchemaExceptionTests
         const string message = "SOAP schema error";
 
         // Act
-        var exception = new SoapSchemaException(message);
+        var exception = new SoapSchemaBuilderException(message);
 
         // Assert
         exception.ShouldSatisfyAllConditions(
@@ -33,7 +33,7 @@ public class SoapSchemaExceptionTests
         var innerException = new FormatException("Schema format error");
 
         // Act
-        var exception = new SoapSchemaException(message, innerException);
+        var exception = new SoapSchemaBuilderException(message, innerException);
 
         // Assert
         exception.ShouldSatisfyAllConditions(

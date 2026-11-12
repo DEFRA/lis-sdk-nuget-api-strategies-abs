@@ -4,7 +4,9 @@
 
 namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions;
 
-public sealed class EntityNotFoundException : Exception
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base;
+
+public sealed class EntityNotFoundException : StrategyPreConditionException
 {
     public EntityNotFoundException(string message)
         : base(message)

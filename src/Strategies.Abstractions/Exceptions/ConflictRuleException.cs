@@ -4,7 +4,9 @@
 
 namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions;
 
-public sealed class ConflictRuleException : Exception
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base;
+
+public sealed class ConflictRuleException : StrategyPreConditionException
 {
     public ConflictRuleException(string message)
         : base(message)

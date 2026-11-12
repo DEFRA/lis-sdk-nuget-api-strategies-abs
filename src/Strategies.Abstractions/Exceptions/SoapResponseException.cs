@@ -2,9 +2,9 @@
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 
-using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base;
-
 namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions;
+
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base;
 
 public sealed class SoapResponseException : HttpClientResponseException
 {

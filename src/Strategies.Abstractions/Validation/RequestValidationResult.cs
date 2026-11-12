@@ -37,7 +37,7 @@ public class RequestValidationResult
         }
     }
 
-    public string[] RuleSetsExecuted { get; set; } = [];
+    public string[] RuleSetsExecuted { get; init; } = [];
 
     public override string ToString()
     {
