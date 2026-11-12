@@ -4,7 +4,9 @@
 
 namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions;
 
-public sealed class BusinessRuleException : Exception
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base;
+
+public sealed class BusinessRuleException : StrategyPreConditionException
 {
     public BusinessRuleException(string message)
         : base(message)

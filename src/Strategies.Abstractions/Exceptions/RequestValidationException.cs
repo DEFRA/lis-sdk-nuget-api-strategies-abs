@@ -4,9 +4,10 @@
 
 namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions;
 
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base;
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation;
 
-public class RequestValidationException : Exception
+public class RequestValidationException : StrategyPreConditionException
 {
     public RequestValidationException(string message)
         : this(message, [])
