@@ -2,6 +2,8 @@
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base;
+
 namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions;
 
 public sealed class RestResponseException : HttpClientResponseException

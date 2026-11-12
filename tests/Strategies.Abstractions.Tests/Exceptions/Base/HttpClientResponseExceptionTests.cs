@@ -2,11 +2,9 @@
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 
-namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Tests.Exceptions;
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base;
 
-using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions;
-using Shouldly;
-using Xunit;
+namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Tests.Exceptions.Base;
 
 public class HttpClientResponseExceptionTests
 {
