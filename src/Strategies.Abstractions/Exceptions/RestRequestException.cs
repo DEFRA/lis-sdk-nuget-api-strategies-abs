@@ -4,7 +4,7 @@
 
 namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions;
 
-public sealed class RestRequestException : HttpRequestException
+public sealed class RestRequestException : HttpClientRequestException
 {
     public RestRequestException(string message)
         : base(message)
