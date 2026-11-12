@@ -30,6 +30,11 @@ public interface ICircuitBreakerStrategy<in TService> : IStrategy<TService, ICir
 
     ICircuitBreakerStrategy<TService> WithHandledException(Func<Exception, bool> predicate);
 
+    ICircuitBreakerStrategy<TService> WithExcludedException<TException>()
+        where TException : Exception;
+
+    ICircuitBreakerStrategy<TService> WithExcludedException(Func<Exception, bool> predicate);
+
     ICircuitBreakerStrategy<TService> WithHandledResult<TResult>(Func<TResult, bool> predicate);
 
     ICircuitBreakerStrategy<TService> WithFallback(Func<CancellationToken, Task> fallbackAction);
