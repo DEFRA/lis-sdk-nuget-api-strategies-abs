@@ -28,10 +28,16 @@ public interface
 
     ICircuitBreakerStrategyFactory<TService> WithDefaultHandledException(Func<Exception, bool> predicate);
 
+    ICircuitBreakerStrategyFactory<TService> WithDefaultHandledException(
+        Func<Exception, CancellationToken, bool> predicate);
+
     ICircuitBreakerStrategyFactory<TService> WithDefaultExcludedException<TException>()
         where TException : Exception;
 
     ICircuitBreakerStrategyFactory<TService> WithDefaultExcludedException(Func<Exception, bool> predicate);
+
+    ICircuitBreakerStrategyFactory<TService> WithDefaultExcludedException(
+        Func<Exception, CancellationToken, bool> predicate);
 
     ICircuitBreakerStrategyFactory<TService> WithDefaultOnBreak(Action<Exception?, TimeSpan> onBreakAction);
 
