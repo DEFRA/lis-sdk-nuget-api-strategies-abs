@@ -6,7 +6,7 @@ namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions;
 
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base;
 
-public sealed class SoapResponseException : HttpClientResponseException
+public sealed class SoapResponseException : HttpClientException
 {
     public SoapResponseException(string message)
         : base(message)

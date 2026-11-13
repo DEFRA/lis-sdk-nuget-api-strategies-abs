@@ -1,21 +1,21 @@
-﻿// <copyright file="HttpClientResponseExceptionTests.cs" company="Defra">
+﻿// <copyright file="HttpClientExceptionTests.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 
-using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base;
-
 namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Tests.Exceptions.Base;
 
-public class HttpClientResponseExceptionTests
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base;
+
+public class HttpClientExceptionTests
 {
     [Fact]
     public void Constructor_WithMessage_ShouldSetMessageProperty()
     {
         // Arrange
-        const string message = "HTTP client response error";
+        const string message = "HTTP client request error";
 
         // Act
-        var exception = new TestHttpClientResponseException(message);
+        var exception = new TestHttpClientRequestException(message);
 
         // Assert
         exception.ShouldSatisfyAllConditions(
@@ -27,11 +27,11 @@ public class HttpClientResponseExceptionTests
     public void Constructor_WithMessageAndInnerException_ShouldSetProperties()
     {
         // Arrange
-        const string message = "HTTP client response error with inner";
+        const string message = "HTTP client request error with inner";
         var innerException = new InvalidOperationException("Inner error");
 
         // Act
-        var exception = new TestHttpClientResponseException(message, innerException);
+        var exception = new TestHttpClientRequestException(message, innerException);
 
         // Assert
         exception.ShouldSatisfyAllConditions(
@@ -39,14 +39,14 @@ public class HttpClientResponseExceptionTests
             x => x.InnerException.ShouldBeSameAs(innerException));
     }
 
-    private sealed class TestHttpClientResponseException : HttpClientResponseException
+    private sealed class TestHttpClientRequestException : HttpClientException
     {
-        public TestHttpClientResponseException(string message)
+        public TestHttpClientRequestException(string message)
             : base(message)
         {
         }
 
-        public TestHttpClientResponseException(string message, Exception innerException)
+        public TestHttpClientRequestException(string message, Exception innerException)
             : base(message, innerException)
         {
         }
