@@ -6,12 +6,15 @@ namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations;
 
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base;
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker;
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.Policies;
 
 public interface
     ICircuitBreakerStrategyFactory<in TService> : IStrategyFactory<TService, ICircuitBreakerStrategyFactory<TService>>
     where TService : class
 {
     ICircuitBreakerStrategyFactory<TService> WithDefaultCircuitKey(string circuitKey);
+
+    ICircuitBreakerStrategyFactory<TService> WithDefaultPolicy(ICircuitBreakerPolicy policy);
 
     ICircuitBreakerStrategyFactory<TService> WithDefaultConsecutiveFailureThreshold(int consecutiveFailureThreshold);
 
@@ -28,10 +31,16 @@ public interface
 
     ICircuitBreakerStrategyFactory<TService> WithDefaultHandledException(Func<Exception, bool> predicate);
 
+    ICircuitBreakerStrategyFactory<TService> WithDefaultHandledException(
+        Func<Exception, CancellationToken, bool> predicate);
+
     ICircuitBreakerStrategyFactory<TService> WithDefaultExcludedException<TException>()
         where TException : Exception;
 
     ICircuitBreakerStrategyFactory<TService> WithDefaultExcludedException(Func<Exception, bool> predicate);
+
+    ICircuitBreakerStrategyFactory<TService> WithDefaultExcludedException(
+        Func<Exception, CancellationToken, bool> predicate);
 
     ICircuitBreakerStrategyFactory<TService> WithDefaultOnBreak(Action<Exception?, TimeSpan> onBreakAction);
 
