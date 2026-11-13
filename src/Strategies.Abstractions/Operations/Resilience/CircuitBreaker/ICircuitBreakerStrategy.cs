@@ -5,11 +5,14 @@
 namespace Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker;
 
 using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base;
+using Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.Policies;
 
 public interface ICircuitBreakerStrategy<in TService> : IStrategy<TService, ICircuitBreakerStrategy<TService>>
     where TService : class
 {
     ICircuitBreakerStrategy<TService> WithCircuitKey(string circuitKey);
+
+    ICircuitBreakerStrategy<TService> WithPolicy(ICircuitBreakerPolicy policy);
 
     ICircuitBreakerStrategy<TService> WithAction(Func<CancellationToken, Task> action);
 
