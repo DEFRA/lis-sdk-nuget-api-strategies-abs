@@ -54,7 +54,7 @@ public interface ICircuitBreakerStrategy<in TService> : IStrategy<TService, ICir
 
     ICircuitBreakerStrategy<TService> OnHalfOpen(Action onHalfOpenAction);
 
-    Task ExecuteAsync();
+    Task Execute();
 
-    Task<TResult> ExecuteAsync<TResult>();
+    Task<TResult> Execute<TResult>();
 }
