@@ -27,4 +27,8 @@ public interface IStrategy<in TService, out TParent>
     TParent WithRequestValidation(Func<Task<RequestValidationResult>> validateAction);
 
     TParent WithAfterExecute(Func<Task> afterExecuteAction);
+
+    TParent When(bool condition, Action<TParent> configure, Action<TParent>? configureElse = null);
+
+    TParent When(Func<bool> predicate, Action<TParent> configure, Action<TParent>? configureElse = null);
 }

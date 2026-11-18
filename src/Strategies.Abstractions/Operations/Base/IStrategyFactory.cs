@@ -14,4 +14,8 @@ public interface IStrategyFactory<in TService, out TParent>
     TParent WithDefaultLogger(ILogger<TService> logger);
 
     TParent WithDefaultOperatorContext(IOperatorContext operatorContext);
+
+    TParent When(bool condition, Action<TParent> configure, Action<TParent>? configureElse = null);
+
+    TParent When(Func<bool> predicate, Action<TParent> configure, Action<TParent>? configureElse = null);
 }
