@@ -1,4 +1,4 @@
-﻿// <copyright file="Operator.cs" company="Defra">
+// <copyright file="Operator.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 
@@ -12,7 +12,7 @@ public class Operator
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(id);
 
-        this.Id = id;
+        Id = id;
         Roles = [];
         IsAuthenticated = isAuthenticated;
     }
@@ -22,7 +22,7 @@ public class Operator
         ArgumentException.ThrowIfNullOrWhiteSpace(id);
         ArgumentNullException.ThrowIfNull(roles);
 
-        this.Id = id;
+        Id = id;
         Roles = roles.Select(r => r).ToFrozenSet();
         IsAuthenticated = isAuthenticated;
     }
@@ -32,7 +32,7 @@ public class Operator
         ArgumentException.ThrowIfNullOrWhiteSpace(id);
         ArgumentNullException.ThrowIfNull(roles);
 
-        this.Id = id;
+        Id = id;
         Name = name;
         Email = email;
         Roles = roles.Select(r => r).ToFrozenSet();

@@ -1,4 +1,4 @@
-﻿// <copyright file="EntityPredicateRule.cs" company="Defra">
+// <copyright file="EntityPredicateRule.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

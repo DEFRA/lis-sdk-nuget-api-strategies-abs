@@ -1,4 +1,4 @@
-﻿// <copyright file="IExistenceRulesBuilder.cs" company="Defra">
+// <copyright file="IExistenceRulesBuilder.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

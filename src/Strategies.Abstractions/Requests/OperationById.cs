@@ -1,4 +1,4 @@
-﻿// <copyright file="OperationById.cs" company="Defra">
+// <copyright file="OperationById.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

@@ -1,4 +1,4 @@
-﻿// <copyright file="PagedEntities.cs" company="Defra">
+// <copyright file="PagedEntities.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

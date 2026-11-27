@@ -1,4 +1,4 @@
-﻿// <copyright file="SoapRequestException.cs" company="Defra">
+// <copyright file="SoapRequestException.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

@@ -1,4 +1,4 @@
-﻿// <copyright file="StrategyException.cs" company="Defra">
+// <copyright file="StrategyException.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

@@ -1,4 +1,4 @@
-﻿// <copyright file="IRestHttpClient.cs" company="Defra">
+// <copyright file="IRestHttpClient.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

@@ -1,4 +1,4 @@
-﻿// <copyright file="IOperatorContext.cs" company="Defra">
+// <copyright file="IOperatorContext.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

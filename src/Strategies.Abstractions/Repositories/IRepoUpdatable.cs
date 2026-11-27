@@ -1,4 +1,4 @@
-﻿// <copyright file="IRepoUpdatable.cs" company="Defra">
+// <copyright file="IRepoUpdatable.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

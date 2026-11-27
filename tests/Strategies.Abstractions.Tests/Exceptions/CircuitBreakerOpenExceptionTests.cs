@@ -1,4 +1,4 @@
-﻿// <copyright file="CircuitBreakerOpenExceptionTests.cs" company="Defra">
+// <copyright file="CircuitBreakerOpenExceptionTests.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

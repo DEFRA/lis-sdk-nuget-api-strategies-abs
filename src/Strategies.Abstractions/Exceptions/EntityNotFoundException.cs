@@ -1,4 +1,4 @@
-﻿// <copyright file="EntityNotFoundException.cs" company="Defra">
+// <copyright file="EntityNotFoundException.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

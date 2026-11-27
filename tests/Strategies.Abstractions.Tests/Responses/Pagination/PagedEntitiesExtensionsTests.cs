@@ -27,7 +27,8 @@ public class PagedEntitiesExtensionsTests
         // Act
         var pagedResults = pagedEntities.ToPagedResults(e => new TargetDto
         {
-            DtoId = e.Id, DisplayName = e.Name.ToUpperInvariant(),
+            DtoId = e.Id,
+            DisplayName = e.Name.ToUpperInvariant(),
         });
 
         // Assert
@@ -47,14 +48,14 @@ public class PagedEntitiesExtensionsTests
             x => x[1].DisplayName.ShouldBe("BOB"));
     }
 
-    private class SourceEntity
+    private sealed class SourceEntity
     {
         public int Id { get; init; }
 
         public string Name { get; init; } = string.Empty;
     }
 
-    private class TargetDto
+    private sealed class TargetDto
     {
         public int DtoId { get; init; }
 

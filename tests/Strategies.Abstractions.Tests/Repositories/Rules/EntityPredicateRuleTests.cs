@@ -49,7 +49,7 @@ public class EntityPredicateRuleTests
             x => x.ErrorMessage.ShouldBe(errorMessage));
     }
 
-    private class TestPredicateEntity
+    private sealed class TestPredicateEntity
     {
         public static int Id => 0;
 

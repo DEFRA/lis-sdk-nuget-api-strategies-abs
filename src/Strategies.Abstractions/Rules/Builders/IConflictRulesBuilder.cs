@@ -1,4 +1,4 @@
-﻿// <copyright file="IConflictRulesBuilder.cs" company="Defra">
+// <copyright file="IConflictRulesBuilder.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

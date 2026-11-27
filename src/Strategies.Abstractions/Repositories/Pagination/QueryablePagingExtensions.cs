@@ -1,4 +1,4 @@
-﻿// <copyright file="QueryablePagingExtensions.cs" company="Defra">
+// <copyright file="QueryablePagingExtensions.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

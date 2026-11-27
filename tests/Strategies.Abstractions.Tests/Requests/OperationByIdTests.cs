@@ -35,7 +35,7 @@ public class OperationByIdTests
         ex.Message.ShouldBe("Operation id has not been set");
     }
 
-    private class TestOperationById<T> : OperationById<T>
+    private sealed class TestOperationById<T> : OperationById<T>
         where T : IComparable
     {
     }
