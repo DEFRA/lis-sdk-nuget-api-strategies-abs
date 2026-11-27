@@ -1,4 +1,4 @@
-﻿// <copyright file="ReferenceRuleException.cs" company="Defra">
+// <copyright file="ReferenceRuleException.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

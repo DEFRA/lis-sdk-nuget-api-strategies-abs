@@ -1,4 +1,4 @@
-﻿// <copyright file="IBusinessRulesBuilder.cs" company="Defra">
+// <copyright file="IBusinessRulesBuilder.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

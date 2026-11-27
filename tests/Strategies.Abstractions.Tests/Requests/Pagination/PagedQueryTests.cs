@@ -30,7 +30,10 @@ public class PagedQueryTests
         // Arrange & Act
         var query = new PagedQuery
         {
-            PageNumber = 2, PageSize = 25, OrderBy = "CreatedDate", OrderByDescending = true,
+            PageNumber = 2,
+            PageSize = 25,
+            OrderBy = "CreatedDate",
+            OrderByDescending = true,
         };
 
         // Assert

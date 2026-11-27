@@ -1,4 +1,4 @@
-﻿// <copyright file="RequestValidationResult.cs" company="Defra">
+// <copyright file="RequestValidationResult.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 
@@ -28,7 +28,11 @@ public class RequestValidationResult
 
     public List<RequestValidationFailure> Errors
     {
-        get => errors;
+        get
+        {
+            return errors;
+        }
+
         set
         {
             ArgumentNullException.ThrowIfNull(value);

@@ -1,0 +1,415 @@
+#nullable enable
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.IOperatorContext
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.IOperatorContext.HasAuthenticatedOperator.get -> bool
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.IOperatorContext.HasOperator.get -> bool
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.IOperatorContext.Operator.get -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.Operator!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.IOperatorContext.SetAuthenticatedOperatorById(string! id) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.IOperatorContext!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.IOperatorContext.SetOperatorByClaimsPrincipal(System.Security.Claims.ClaimsPrincipal! claimsPrincipal) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.IOperatorContext!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.Operator
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.Operator.Email.get -> string?
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.Operator.GetIdAsGuid() -> System.Guid
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.Operator.GetIdAsInt() -> int
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.Operator.HasRole(string! role) -> bool
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.Operator.Id.get -> string!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.Operator.IsAuthenticated.get -> bool
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.Operator.LoggableId.get -> string!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.Operator.Name.get -> string?
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.Operator.Operator(string! id, bool isAuthenticated) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.Operator.Operator(string! id, string![]! roles, bool isAuthenticated) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.Operator.Operator(string! id, string? name, string? email, string![]! roles, bool isAuthenticated) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.Operator.Roles.get -> System.Collections.Frozen.FrozenSet<string!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base.HttpClientException
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base.HttpClientException.HttpClientException(string! message) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base.HttpClientException.HttpClientException(string! message, System.Exception! innerException) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base.StrategyException
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base.StrategyException.StrategyException(string! message) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base.StrategyException.StrategyException(string! message, System.Exception! innerException) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base.StrategyPreConditionException
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base.StrategyPreConditionException.StrategyPreConditionException(string! message) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.Base.StrategyPreConditionException.StrategyPreConditionException(string! message, System.Exception! innerException) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.BusinessRuleException
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.BusinessRuleException.BusinessRuleException(string! message) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.CircuitBreakerOpenException
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.CircuitBreakerOpenException.CircuitBreakerOpenException(string! message) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.CircuitBreakerOpenException.CircuitBreakerOpenException(string! message, System.Exception! innerException) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.ConflictRuleException
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.ConflictRuleException.ConflictRuleException(string! message) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.EntityNotFoundException
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.EntityNotFoundException.EntityNotFoundException(string! message) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.ExistenceRuleException
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.ExistenceRuleException.ExistenceRuleException(string! message) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.ReferenceRuleException
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.ReferenceRuleException.ReferenceRuleException(string! message) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.RequestValidationException
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.RequestValidationException.Errors.get -> System.Collections.Generic.IEnumerable<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.RequestValidationException.RequestValidationException(System.Collections.Generic.List<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure!>! errors) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.RequestValidationException.RequestValidationException(string! message) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.RequestValidationException.RequestValidationException(string! message, System.Collections.Generic.List<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure!>! errors) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.RequestValidationException.RequestValidationException(string! message, System.Collections.Generic.List<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure!>! errors, bool appendDefaultMessage) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.RestRequestException
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.RestRequestException.RestRequestException(string! message) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.RestRequestException.RestRequestException(string! message, System.Exception! innerException) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.RestResponseException
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.RestResponseException.RestResponseException(string! message) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.RestResponseException.RestResponseException(string! message, System.Exception! innerException) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.SoapRequestException
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.SoapRequestException.SoapRequestException(string! message) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.SoapRequestException.SoapRequestException(string! message, System.Exception! innerException) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.SoapResponseException
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.SoapResponseException.SoapResponseException(string! message) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.SoapResponseException.SoapResponseException(string! message, System.Exception! innerException) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.SoapSchemaBuilderException
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.SoapSchemaBuilderException.SoapSchemaBuilderException(string! message) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Exceptions.SoapSchemaBuilderException.SoapSchemaBuilderException(string! message, System.Exception! innerException) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Extensions.ExpressionExtensions
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base.IStrategy<TService, TParent>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base.IStrategy<TService, TParent>.When(System.Func<bool>! predicate, System.Action<TParent!>! configure, System.Action<TParent!>? configureElse = null) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base.IStrategy<TService, TParent>.When(bool condition, System.Action<TParent!>! configure, System.Action<TParent!>? configureElse = null) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base.IStrategy<TService, TParent>.WithActionDescription(string! actionDescription) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base.IStrategy<TService, TParent>.WithAfterExecute(System.Func<System.Threading.Tasks.Task!>! afterExecuteAction) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base.IStrategy<TService, TParent>.WithBeforeExecute(System.Func<System.Threading.Tasks.Task!>! beforeExecuteAction) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base.IStrategy<TService, TParent>.WithCancellationToken(System.Threading.CancellationToken cancellationToken) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base.IStrategy<TService, TParent>.WithLogger(Microsoft.Extensions.Logging.ILogger<TService!>! logger) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base.IStrategy<TService, TParent>.WithOperatorContext(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.IOperatorContext! operatorContext) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base.IStrategy<TService, TParent>.WithRequestValidation(System.Func<System.Threading.Tasks.Task<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationResult!>!>! validateAction) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base.IStrategy<TService, TParent>.WithRequiresAuthenticatedOperator() -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base.IStrategyFactory<TService, TParent>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base.IStrategyFactory<TService, TParent>.When(System.Func<bool>! predicate, System.Action<TParent!>! configure, System.Action<TParent!>? configureElse = null) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base.IStrategyFactory<TService, TParent>.When(bool condition, System.Action<TParent!>! configure, System.Action<TParent!>? configureElse = null) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base.IStrategyFactory<TService, TParent>.WithDefaultLogger(Microsoft.Extensions.Logging.ILogger<TService!>! logger) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Base.IStrategyFactory<TService, TParent>.WithDefaultOperatorContext(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Context.IOperatorContext! operatorContext) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategy<TService, TParent>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategy<TService, TParent>.WithApiDescription(string! apiDescription) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategy<TService, TParent>.WithApiKey(System.Func<bool>! expression, string! apiKey) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategy<TService, TParent>.WithApiKey(string! apiKey) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategy<TService, TParent>.WithBaseUrl(string! baseUrl) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategy<TService, TParent>.WithBasicAuth(string! username, string! password) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategy<TService, TParent>.WithHeader(string! name, string! value) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategy<TService, TParent>.WithMediaType(string! mediaType) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategy<TService, TParent>.WithTimeout(int timeoutMs) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategyFactory<TService, TParent>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategyFactory<TService, TParent>.WithDefaultApiDescription(string! apiDescription) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategyFactory<TService, TParent>.WithDefaultApiKey(System.Func<bool>! expression, string! apiKey) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategyFactory<TService, TParent>.WithDefaultApiKey(string! apiKey) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategyFactory<TService, TParent>.WithDefaultBaseUrl(string! baseUrl) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategyFactory<TService, TParent>.WithDefaultBasicAuth(string! username, string! password) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategyFactory<TService, TParent>.WithDefaultMediaType(string! mediaType) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategyFactory<TService, TParent>.WithDefaultTimeout(int timeoutMs) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Base.IHttpStrategyFactory<TService, TParent>.WithDefaultVerboseOutput(System.Action<string!, string?>! verboseOutputAction) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Client.IRestHttpClient
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Client.IRestHttpClient.SendAsync(System.Net.Http.HttpMethod! httpMethod, string? relativeUrl, string? payload = null, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Models.RestResponse!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Client.IRestHttpClient.WithBaseUrl(string! baseUrl) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Client.IRestHttpClient!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Client.IRestHttpClient.WithHeader(string! name, string! value) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Client.IRestHttpClient!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Client.IRestHttpClient.WithMediaType(string! mediaType) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Client.IRestHttpClient!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Client.IRestHttpClient.WithQueryParameter(string! name, string! value) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Client.IRestHttpClient!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Client.IRestHttpClient.WithTimeout(int timeoutMs) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Client.IRestHttpClient!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Client.IRestHttpClient.WithVerboseOutput(System.Action<string!, string?>? verboseOutputAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Client.IRestHttpClient!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.Execute<TResult>() -> System.Threading.Tasks.Task<TResult!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.ExecuteAndTransform<TResponse, TResult>(System.Func<TResponse!, TResult!>! transform) -> System.Threading.Tasks.Task<TResult!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.ExecuteWithoutResponse() -> System.Threading.Tasks.Task!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.WithDelete() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.WithGet() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.WithHead() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.WithJsonSerializerOptions(System.Text.Json.JsonSerializerOptions! jsonSerializerOptions) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.WithOptions() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.WithPatch() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.WithPayload<TRequest>(System.Func<TRequest>! payloadAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.WithPayload<TRequest>(TRequest payload) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.WithPost() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.WithPut() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.WithQueryParameter(System.Func<bool>! expression, string! name, string! value) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.WithQueryParameter(string! name, string! value) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.WithQueryParameters(System.Collections.Generic.IDictionary<string!, string!>! queryParameters) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.WithResourceUrl(string! resourceUrl) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService>.WithVerboseOutput(System.Action<string!, string?>! verboseOutputAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Models.RestResponse
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Models.RestResponse.Content.get -> string?
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Models.RestResponse.Content.init -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Models.RestResponse.HasContent.get -> bool
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Models.RestResponse.HasContent.init -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Models.RestResponse.Headers.get -> System.Net.Http.Headers.HttpResponseHeaders?
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Models.RestResponse.Headers.init -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Models.RestResponse.RestResponse() -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Models.RestResponse.StatusCode.get -> System.Net.HttpStatusCode
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.Models.RestResponse.StatusCode.init -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Client.ISoapHttpClient
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Client.ISoapHttpClient.PostAsync(string! relativeUrl, System.Xml.Linq.XElement! payload, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Models.SoapResponse!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Client.ISoapHttpClient.WithBaseUrl(string! baseUrl) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Client.ISoapHttpClient!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Client.ISoapHttpClient.WithHeader(string! name, string! value) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Client.ISoapHttpClient!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Client.ISoapHttpClient.WithMediaType(string! mediaType) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Client.ISoapHttpClient!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Client.ISoapHttpClient.WithSoapAction(string! soapAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Client.ISoapHttpClient!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Client.ISoapHttpClient.WithTimeout(int timeoutMs) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Client.ISoapHttpClient!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Client.ISoapHttpClient.WithVerboseOutput(System.Action<string!, string?>? verboseOutputAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Client.ISoapHttpClient!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Client.ISoapHttpClient.WithXmlDeclaration(bool includeXmlDeclaration) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Client.ISoapHttpClient!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.Execute() -> System.Threading.Tasks.Task<System.Xml.Linq.XElement!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.Execute<TResult>() -> System.Threading.Tasks.Task<TResult!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.ExecuteAndTransform<TResponse, TResult>(System.Func<TResponse!, System.Func<System.Xml.Linq.XElement!, TResult!>!, TResult!>! transform) -> System.Threading.Tasks.Task<TResult!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.ExecuteAndTransform<TResponse, TResult>(System.Func<TResponse!, TResult!>! transform) -> System.Threading.Tasks.Task<TResult!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.ExecuteAndTransform<TResult>(System.Func<System.Xml.Linq.XElement!, TResult!>! transform) -> System.Threading.Tasks.Task<TResult!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.ExecuteWithoutResponse() -> System.Threading.Tasks.Task!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.WithPayload(System.Func<System.Xml.Linq.XElement!>! payloadAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.WithPayload<TRequest>(System.Func<TRequest>! payloadAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.WithPayload<TRequest>(TRequest payload) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.WithPayloadTransformer(System.Func<System.Xml.Linq.XElement?, System.Xml.Linq.XElement?>! payloadTransformerAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.WithResponseTransformer(System.Func<System.Xml.Linq.XElement?, System.Xml.Linq.XElement?>! responseTransformerAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.WithSchemas(System.Action<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Schemas.Builders.ISoapSchemaBuilder!>! builder) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.WithServiceUrl(string! serviceUrl) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.WithSoapAction(string! soapAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.WithValidatePayloadSchema(string? targetElementName = null) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.WithValidatePreTransformPayloadSchema(string? targetElementName = null) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.WithVerboseOutput(System.Action<string!, string?>! verboseOutputAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService>.WithXmlDeclaration(bool includeXmlDeclaration) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Models.SoapResponse
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Models.SoapResponse.BodyContent.get -> System.Xml.Linq.XElement?
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Models.SoapResponse.BodyContent.init -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Models.SoapResponse.HasBody.get -> bool
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Models.SoapResponse.HasBody.init -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Models.SoapResponse.HasBodyContent.get -> bool
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Models.SoapResponse.HasContent.get -> bool
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Models.SoapResponse.HasContent.init -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Models.SoapResponse.HasSoapFault.get -> bool
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Models.SoapResponse.HasSoapFault.init -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Models.SoapResponse.SoapFaultCode.get -> string?
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Models.SoapResponse.SoapFaultCode.init -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Models.SoapResponse.SoapFaultDetails.get -> string?
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Models.SoapResponse.SoapFaultDetails.init -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Models.SoapResponse.SoapResponse() -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Schemas.Builders.ISoapSchemaBuilder
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Schemas.Builders.ISoapSchemaBuilder.Add(System.Collections.Generic.IEnumerable<string!>! schemaFiles) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Schemas.Builders.ISoapSchemaBuilder!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Schemas.Builders.ISoapSchemaBuilder.Add(System.Reflection.Assembly! assembly, string! resourceNamespace) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Schemas.Builders.ISoapSchemaBuilder!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Schemas.Builders.ISoapSchemaBuilder.Add(params string![]! schemaFiles) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Schemas.Builders.ISoapSchemaBuilder!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.Schemas.Builders.ISoapSchemaBuilder.Build() -> System.Xml.Schema.XmlSchemaSet!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>.BuildCircuitBreakerStrategy() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>.WithDefaultCircuitKey(string! circuitKey) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>.WithDefaultConsecutiveFailureThreshold(int consecutiveFailureThreshold) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>.WithDefaultDurationOfBreak(int durationOfBreakMs) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>.WithDefaultExcludedException(System.Func<System.Exception!, System.Threading.CancellationToken, bool>! predicate) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>.WithDefaultExcludedException(System.Func<System.Exception!, bool>! predicate) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>.WithDefaultExcludedException<TException>() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>.WithDefaultFailureRatio(double failureRatio) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>.WithDefaultHandledException(System.Func<System.Exception!, System.Threading.CancellationToken, bool>! predicate) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>.WithDefaultHandledException(System.Func<System.Exception!, bool>! predicate) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>.WithDefaultHandledException<TException>() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>.WithDefaultMinimumThroughput(int minimumThroughput) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>.WithDefaultOnBreak(System.Action<System.Exception?, System.TimeSpan>! onBreakAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>.WithDefaultOnHalfOpen(System.Action! onHalfOpenAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>.WithDefaultOnReset(System.Action! onResetAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>.WithDefaultPolicy(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.Policies.ICircuitBreakerPolicy! policy) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService>.WithDefaultSamplingDuration(int samplingDurationMs) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ICircuitBreakerStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.IRepoStrategyFactory<TService>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.IRepoStrategyFactory<TService>.BuildCreateStrategy<TEntity>() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.ICreateRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.IRepoStrategyFactory<TService>.BuildGetListStrategy<TEntity>() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetListRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.IRepoStrategyFactory<TService>.BuildGetPagedStrategy<TEntity>() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetPagedRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.IRepoStrategyFactory<TService>.BuildGetStrategy<TEntity>() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.IRepoStrategyFactory<TService>.BuildUpdateStrategy<TEntity>() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.IRepoStrategyFactory<TService>.BuildUpsertStrategy<TEntity>() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.IRepoStrategyFactory<TService>.WithDefaultEntityDescription(string! entityDescription) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.IRepoStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.IRestStrategyFactory<TService>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.IRestStrategyFactory<TService>.BuildRestStrategy() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Rest.IRestStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.IRestStrategyFactory<TService>.WithDefaultJsonSerializerOptions(System.Text.Json.JsonSerializerOptions! jsonSerializerOptions) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.IRestStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.IRestStrategyFactory<TService>.WithDefaultResourceUrl(string! resourceUrl) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.IRestStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ISoapStrategyFactory<TService>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ISoapStrategyFactory<TService>.BuildSoapStrategy() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Http.Soap.ISoapStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ISoapStrategyFactory<TService>.WithDefaultServiceUrl(string! serviceUrl) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ISoapStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ISoapStrategyFactory<TService>.WithDefaultSoapAction(string! soapAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ISoapStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ISoapStrategyFactory<TService>.WithDefaultXmlDeclaration(bool withDefaultXmlDeclaration) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.ISoapStrategyFactory<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.Base.IRepoStrategy<TService, TParent>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.Base.IRepoStrategy<TService, TParent>.WithEntityDescription(string! entityDescription) -> TParent!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.ICreateRepoStrategy<TService, TEntity>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.ICreateRepoStrategy<TService, TEntity>.Execute() -> System.Threading.Tasks.Task<TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.ICreateRepoStrategy<TService, TEntity>.ExecuteAndMap<TResult>(System.Func<TEntity!, TResult!>! map) -> System.Threading.Tasks.Task<TResult!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.ICreateRepoStrategy<TService, TEntity>.WithAfterCreate(System.Func<TEntity!, System.Threading.Tasks.Task!>! afterCreateAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.ICreateRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.ICreateRepoStrategy<TService, TEntity>.WithCreate(System.Func<TEntity!>! createAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.ICreateRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.ICreateRepoStrategy<TService, TEntity>.WithReferenceRules(System.Action<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IReferenceRulesBuilder<TService!>!>! builder) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.ICreateRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.ICreateRepoStrategy<TService, TEntity>.WithRepository(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.IRepoCreatable<TEntity!>! repository) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.ICreateRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetListRepoStrategy<TService, TEntity>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetListRepoStrategy<TService, TEntity>.Execute() -> System.Threading.Tasks.Task<System.Collections.Generic.List<TEntity!>!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetListRepoStrategy<TService, TEntity>.ExecuteAndMap<TResult>(System.Func<TEntity!, TResult!>! map) -> System.Threading.Tasks.Task<System.Collections.Generic.List<TResult!>!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetListRepoStrategy<TService, TEntity>.ExecuteAndTransform<TResult>(System.Func<System.Collections.Generic.List<TEntity!>!, TResult!>! transform) -> System.Threading.Tasks.Task<TResult!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetListRepoStrategy<TService, TEntity>.WithEntityFilter(System.Linq.Expressions.Expression<System.Func<TEntity!, bool>!>! entityFilter) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetListRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetListRepoStrategy<TService, TEntity>.WithRepository<TRepository>(TRepository repository) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetListRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetPagedRepoStrategy<TService, TEntity>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetPagedRepoStrategy<TService, TEntity>.Execute<TOrderBy>(System.Linq.Expressions.Expression<System.Func<TEntity!, TOrderBy>!>! orderBy) -> System.Threading.Tasks.Task<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Pagination.PagedEntities<TEntity!>!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetPagedRepoStrategy<TService, TEntity>.ExecuteAndMap<TResult, TOrderBy>(System.Func<TEntity!, TResult!>! map, System.Linq.Expressions.Expression<System.Func<TEntity!, TOrderBy>!>! orderBy) -> System.Threading.Tasks.Task<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Responses.Pagination.PagedResults<TResult!>!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetPagedRepoStrategy<TService, TEntity>.ExecuteAndTransform<TResult, TOrderBy>(System.Func<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Pagination.PagedEntities<TEntity!>!, TResult!>! transform, System.Linq.Expressions.Expression<System.Func<TEntity!, TOrderBy>!>! orderBy) -> System.Threading.Tasks.Task<TResult!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetPagedRepoStrategy<TService, TEntity>.WithEntityFilter(System.Linq.Expressions.Expression<System.Func<TEntity!, bool>!>! entityFilter) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetPagedRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetPagedRepoStrategy<TService, TEntity>.WithRepository<TRepository>(TRepository repository) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetPagedRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetPagedRepoStrategy<TService, TEntity>.WithRequest<TRequest>(TRequest! request) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetPagedRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetRepoStrategy<TService, TEntity>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetRepoStrategy<TService, TEntity>.Execute() -> System.Threading.Tasks.Task<TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetRepoStrategy<TService, TEntity>.ExecuteAndMap<TResult>(System.Func<TEntity!, TResult!>! map) -> System.Threading.Tasks.Task<TResult!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetRepoStrategy<TService, TEntity>.WithEntityFilter(System.Linq.Expressions.Expression<System.Func<TEntity!, bool>!>! entityFilter) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetRepoStrategy<TService, TEntity>.WithExistenceRules(System.Action<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IExistenceRulesBuilder<TService!, TEntity!>!>! builder) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetRepoStrategy<TService, TEntity>.WithRepository<TRepository>(TRepository repository) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetRepoStrategy<TService, TEntity>.WithRequest(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.ILoggableById! request) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IGetRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService, TEntity>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService, TEntity>.Execute() -> System.Threading.Tasks.Task<TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService, TEntity>.ExecuteAndMap<TResult>(System.Func<TEntity!, TResult!>! map) -> System.Threading.Tasks.Task<TResult!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService, TEntity>.WithAfterUpdate(System.Func<TEntity!, System.Threading.Tasks.Task!>! afterUpdateAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService, TEntity>.WithBeforeUpdate(System.Func<TEntity!, System.Threading.Tasks.Task!>! beforeUpdateAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService, TEntity>.WithBusinessRules(System.Action<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IBusinessRulesBuilder<TService!, TEntity!>!>! builder) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService, TEntity>.WithConflictRules(System.Action<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IConflictRulesBuilder<TService!, TEntity!>!>! builder) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService, TEntity>.WithEntityFilter(System.Linq.Expressions.Expression<System.Func<TEntity!, bool>!>! entityFilter) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService, TEntity>.WithExistenceRules(System.Action<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IExistenceRulesBuilder<TService!, TEntity!>!>! builder) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService, TEntity>.WithReferenceRules(System.Action<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IReferenceRulesBuilder<TService!>!>! builder) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService, TEntity>.WithRepository<TRepository>(TRepository repository) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService, TEntity>.WithRequest(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.ILoggableById! request) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService, TEntity>.WithUpdate(System.Action<TEntity!>! updateAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpdateRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService, TEntity>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService, TEntity>.Execute() -> System.Threading.Tasks.Task<TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService, TEntity>.ExecuteAndMap<TResult>(System.Func<TEntity!, TResult!>! map) -> System.Threading.Tasks.Task<TResult!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService, TEntity>.WithAfterCreate(System.Func<TEntity!, System.Threading.Tasks.Task!>! afterCreateAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService, TEntity>.WithAfterUpdate(System.Func<TEntity!, System.Threading.Tasks.Task!>! afterUpdateAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService, TEntity>.WithBusinessRules(System.Action<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IBusinessRulesBuilder<TService!, TEntity!>!>! builder) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService, TEntity>.WithConflictRules(System.Action<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IConflictRulesBuilder<TService!, TEntity!>!>! builder) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService, TEntity>.WithCreate(System.Func<TEntity!>! createAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService, TEntity>.WithEntityFilter(System.Linq.Expressions.Expression<System.Func<TEntity!, bool>!>! entityFilter) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService, TEntity>.WithExistenceRules(System.Action<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IExistenceRulesBuilder<TService!, TEntity!>!>! builder) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService, TEntity>.WithReferenceRules(System.Action<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IReferenceRulesBuilder<TService!>!>! builder) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService, TEntity>.WithRepository<TRepository>(TRepository repository) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService, TEntity>.WithRequest(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.ILoggableById! request) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService, TEntity>.WithUpdate(System.Action<TEntity!>! updateAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Repositories.IUpsertRepoStrategy<TService!, TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.Execute() -> System.Threading.Tasks.Task!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.Execute<TResult>() -> System.Threading.Tasks.Task<TResult>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.OnBreak(System.Action<System.Exception?, System.TimeSpan>! onBreakAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.OnHalfOpen(System.Action! onHalfOpenAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.OnReset(System.Action! onResetAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithAction(System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task!>! action) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithAction<TResult>(System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<TResult>!>! action) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithCircuitKey(string! circuitKey) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithConsecutiveFailureThreshold(int consecutiveFailureThreshold) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithDurationOfBreak(int durationOfBreakMs) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithExcludedException(System.Func<System.Exception!, System.Threading.CancellationToken, bool>! predicate) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithExcludedException(System.Func<System.Exception!, bool>! predicate) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithExcludedException<TException>() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithFailureRatio(double failureRatio) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithFallback(System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task!>! fallbackAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithFallback<TResult>(System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<TResult>!>! fallbackAction) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithHandledException(System.Func<System.Exception!, System.Threading.CancellationToken, bool>! predicate) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithHandledException(System.Func<System.Exception!, bool>! predicate) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithHandledException<TException>() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithHandledResult<TResult>(System.Func<TResult, bool>! predicate) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithMinimumThroughput(int minimumThroughput) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithPolicy(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.Policies.ICircuitBreakerPolicy! policy) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService>.WithSamplingDuration(int samplingDurationMs) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.Policies.ICircuitBreakerPolicy
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.Policies.ICircuitBreakerPolicy.Execute<TService>(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.ICircuitBreakerStrategy<TService!>! circuitBreakerStrategy) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.Policies.ICircuitBreakerPolicyFactory
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.Policies.ICircuitBreakerPolicyFactory.CreateHttpPolicy() -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Operations.Resilience.CircuitBreaker.Policies.ICircuitBreakerPolicy!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.IRepoCapability
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.IRepoCreatable<TEntity>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.IRepoCreatable<TEntity>.Create(TEntity! entity, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.IRepoGettable<TEntity>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.IRepoGettable<TEntity>.GetSingle(System.Linq.Expressions.Expression<System.Func<TEntity!, bool>!>! predicate, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<TEntity?>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.IRepoListable<TEntity>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.IRepoListable<TEntity>.GetList(System.Linq.Expressions.Expression<System.Func<TEntity!, bool>!>! predicate, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<System.Collections.Generic.List<TEntity!>!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.IRepoPageable<TEntity>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.IRepoPageable<TEntity>.GetPaged<TOrderBy>(System.Linq.Expressions.Expression<System.Func<TEntity!, bool>!>! predicate, int pageNumber, int pageSize, System.Linq.Expressions.Expression<System.Func<TEntity!, TOrderBy>!>! orderBy, bool orderByDescending, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Pagination.PagedEntities<TEntity!>!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.IRepoUpdatable<TEntity>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.IRepoUpdatable<TEntity>.Update(TEntity! entity, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<TEntity!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Pagination.PagedEntities<TEntity>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Pagination.PagedEntities<TEntity>.Items.get -> System.Collections.Generic.List<TEntity>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Pagination.PagedEntities<TEntity>.PageNumber.get -> int
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Pagination.PagedEntities<TEntity>.PageSize.get -> int
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Pagination.PagedEntities<TEntity>.PagedEntities(System.Collections.Generic.List<TEntity>! items, int totalCount, int totalPages, int pageNumber, int pageSize) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Pagination.PagedEntities<TEntity>.TotalCount.get -> int
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Pagination.PagedEntities<TEntity>.TotalPages.get -> int
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Pagination.QueryablePagingExtensions
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Rules.EntityPredicateRule<TEntity>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Rules.EntityPredicateRule<TEntity>.Description.get -> string!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Rules.EntityPredicateRule<TEntity>.EntityPredicateRule(System.Func<TEntity!, bool>! predicate, string! description, string? errorMessage = null) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Rules.EntityPredicateRule<TEntity>.ErrorMessage.get -> string?
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Rules.EntityPredicateRule<TEntity>.Predicate.get -> System.Func<TEntity!, bool>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Rules.EntityReferenceRule<TEntity>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Rules.EntityReferenceRule<TEntity>.Description.get -> string!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Rules.EntityReferenceRule<TEntity>.EntityReferenceRule(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.IRepoGettable<TEntity!>! repository, System.Linq.Expressions.Expression<System.Func<TEntity!, bool>!>! predicate, string! description) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Rules.EntityReferenceRule<TEntity>.Validator.get -> System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<bool>!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.ILoggableById
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.ILoggableById.GetLoggableId() -> string!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.IOperationById<T>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.IOperationById<T>.Id.get -> T
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.IOperationById<T>.Id.set -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.OperationById<T>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.OperationById<T>.GetLoggableId() -> string!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.OperationById<T>.Id.get -> T
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.OperationById<T>.Id.set -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.OperationById<T>.OperationById() -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.Pagination.PagedQuery
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.Pagination.PagedQuery.OrderBy.get -> string?
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.Pagination.PagedQuery.OrderBy.set -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.Pagination.PagedQuery.OrderByDescending.get -> bool?
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.Pagination.PagedQuery.OrderByDescending.set -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.Pagination.PagedQuery.PageNumber.get -> int
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.Pagination.PagedQuery.PageNumber.set -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.Pagination.PagedQuery.PageSize.get -> int
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.Pagination.PagedQuery.PageSize.set -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.Pagination.PagedQuery.PagedQuery() -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Responses.Pagination.PagedEntitiesExtensions
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Responses.Pagination.PagedResults<T>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Responses.Pagination.PagedResults<T>.Items.get -> System.Collections.Generic.IEnumerable<T>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Responses.Pagination.PagedResults<T>.PageNumber.get -> int
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Responses.Pagination.PagedResults<T>.PageSize.get -> int
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Responses.Pagination.PagedResults<T>.PagedResults(System.Collections.Generic.IEnumerable<T>! items, int totalCount, int totalPages, int pageNumber, int pageSize) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Responses.Pagination.PagedResults<T>.TotalCount.get -> int
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Responses.Pagination.PagedResults<T>.TotalPages.get -> int
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IBusinessRulesBuilder<TService, T>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IBusinessRulesBuilder<TService, T>.Add(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.IPredicateRule<T!>! predicateRule) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IBusinessRulesBuilder<TService!, T!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IBusinessRulesBuilder<TService, T>.Add(System.Func<T!, bool>! expression, string! description, string? errorMessage = null) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IBusinessRulesBuilder<TService!, T!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IBusinessRulesBuilder<TService, T>.Validate(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.ILoggableById! request, T! modelToValidate, string! actionDescription, string! modelDescription, Microsoft.Extensions.Logging.ILogger<TService!>! logger) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IConflictRulesBuilder<TService, T>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IConflictRulesBuilder<TService, T>.Add(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.IPredicateRule<T!>! predicateRule) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IConflictRulesBuilder<TService!, T!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IConflictRulesBuilder<TService, T>.Add(System.Func<T!, bool>! expression, string! description, string? errorMessage = null) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IConflictRulesBuilder<TService!, T!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IConflictRulesBuilder<TService, T>.Validate(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.ILoggableById! request, T! modelToValidate, string! actionDescription, string! modelDescription, Microsoft.Extensions.Logging.ILogger<TService!>! logger) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IExistenceRulesBuilder<TService, T>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IExistenceRulesBuilder<TService, T>.Add(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.IPredicateRule<T!>! predicateRule) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IExistenceRulesBuilder<TService!, T!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IExistenceRulesBuilder<TService, T>.Add(System.Func<T!, bool>! expression, string! description) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IExistenceRulesBuilder<TService!, T!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IExistenceRulesBuilder<TService, T>.Validate(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Requests.ILoggableById! request, T! modelToValidate, string! modelDescription, Microsoft.Extensions.Logging.ILogger<TService!>! logger) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IReferenceRulesBuilder<TService>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IReferenceRulesBuilder<TService>.Add(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.IReferenceRule! rule) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IReferenceRulesBuilder<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IReferenceRulesBuilder<TService>.Add<T>(Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.IRepoGettable<T!>! repository, System.Linq.Expressions.Expression<System.Func<T!, bool>!>! predicate, string! description) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IReferenceRulesBuilder<TService!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.Builders.IReferenceRulesBuilder<TService>.Validate(string! actionDescription, string! modelDescription, Microsoft.Extensions.Logging.ILogger<TService!>! logger, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.Task!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.IPredicateRule<T>
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.IPredicateRule<T>.Description.get -> string!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.IPredicateRule<T>.ErrorMessage.get -> string?
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.IPredicateRule<T>.Predicate.get -> System.Func<T!, bool>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.IReferenceRule
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.IReferenceRule.Description.get -> string!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Rules.IReferenceRule.Validator.get -> System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<bool>!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure.AttemptedValue.get -> object?
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure.AttemptedValue.set -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure.CustomState.get -> object?
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure.CustomState.set -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure.ErrorCode.get -> string?
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure.ErrorCode.set -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure.ErrorMessage.get -> string!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure.ErrorMessage.set -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure.FormattedMessagePlaceholderValues.get -> System.Collections.Generic.Dictionary<string!, object!>?
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure.FormattedMessagePlaceholderValues.set -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure.PropertyName.get -> string!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure.PropertyName.set -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure.RequestValidationFailure(string! propertyName, string! errorMessage, object? attemptedValue = null) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure.Severity.get -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailureSeverity
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure.Severity.set -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailureSeverity
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailureSeverity.Error = 0 -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailureSeverity
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailureSeverity.Info = 2 -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailureSeverity
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailureSeverity.Warning = 1 -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailureSeverity
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationResult
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationResult.Errors.get -> System.Collections.Generic.List<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure!>!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationResult.Errors.set -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationResult.IsValid.get -> bool
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationResult.RequestValidationResult(System.Collections.Generic.IEnumerable<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure!>! failures) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationResult.RequestValidationResult(System.Collections.Generic.IEnumerable<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationResult!>! otherResults) -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationResult.RuleSetsExecuted.get -> string![]!
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationResult.RuleSetsExecuted.init -> void
+Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationResult.ToDictionary() -> System.Collections.Generic.IDictionary<string!, string![]!>!
+override Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationFailure.ToString() -> string!
+override Defra.Livestock.Sdk.Api.Strategies.Abstractions.Validation.RequestValidationResult.ToString() -> string!
+static Defra.Livestock.Sdk.Api.Strategies.Abstractions.Extensions.ExpressionExtensions.AndAlso<T>(this System.Linq.Expressions.Expression<System.Func<T, bool>!>! left, System.Linq.Expressions.Expression<System.Func<T, bool>!>! right) -> System.Linq.Expressions.Expression<System.Func<T, bool>!>!
+static Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Pagination.QueryablePagingExtensions.ToPaged<TEntity, TOrderBy>(this System.Linq.IQueryable<TEntity>! query, int pageNumber, int pageSize, System.Linq.Expressions.Expression<System.Func<TEntity, TOrderBy>!>! orderBy, bool orderByDescending, System.Func<System.Linq.IQueryable<TEntity>!, System.Threading.CancellationToken, System.Threading.Tasks.Task<int>!>! countAsyncFunc, System.Func<System.Linq.IQueryable<TEntity>!, System.Threading.CancellationToken, System.Threading.Tasks.Task<System.Collections.Generic.List<TEntity>!>!>! toListAsyncFunc, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Pagination.PagedEntities<TEntity>!>!
+static Defra.Livestock.Sdk.Api.Strategies.Abstractions.Responses.Pagination.PagedEntitiesExtensions.ToPagedResults<T, TEntity>(this Defra.Livestock.Sdk.Api.Strategies.Abstractions.Repositories.Pagination.PagedEntities<TEntity>! pagedEntities, System.Func<TEntity, T>! mapper) -> Defra.Livestock.Sdk.Api.Strategies.Abstractions.Responses.Pagination.PagedResults<T>!

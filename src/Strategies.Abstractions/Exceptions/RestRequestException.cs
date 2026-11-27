@@ -1,4 +1,4 @@
-﻿// <copyright file="RestRequestException.cs" company="Defra">
+// <copyright file="RestRequestException.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

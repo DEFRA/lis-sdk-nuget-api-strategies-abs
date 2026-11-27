@@ -1,4 +1,4 @@
-﻿// <copyright file="ConflictRuleException.cs" company="Defra">
+// <copyright file="ConflictRuleException.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

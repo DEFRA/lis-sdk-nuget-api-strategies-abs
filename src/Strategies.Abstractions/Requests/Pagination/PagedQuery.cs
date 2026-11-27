@@ -1,4 +1,4 @@
-﻿// <copyright file="PagedQuery.cs" company="Defra">
+// <copyright file="PagedQuery.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

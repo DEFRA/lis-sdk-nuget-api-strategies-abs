@@ -1,4 +1,4 @@
-﻿// <copyright file="ISoapStrategyFactory.cs" company="Defra">
+// <copyright file="ISoapStrategyFactory.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

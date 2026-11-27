@@ -1,4 +1,4 @@
-﻿// <copyright file="ExpressionExtensions.cs" company="Defra">
+// <copyright file="ExpressionExtensions.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

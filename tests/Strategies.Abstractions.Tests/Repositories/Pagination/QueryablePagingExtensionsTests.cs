@@ -111,7 +111,7 @@ public class QueryablePagingExtensionsTests
             x => x.TotalCount.ShouldBe(totalCount));
     }
 
-    private class TestItem
+    private sealed class TestItem
     {
         public int Id { get; init; }
 

@@ -1,4 +1,4 @@
-﻿// <copyright file="IStrategyFactory.cs" company="Defra">
+// <copyright file="IStrategyFactory.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

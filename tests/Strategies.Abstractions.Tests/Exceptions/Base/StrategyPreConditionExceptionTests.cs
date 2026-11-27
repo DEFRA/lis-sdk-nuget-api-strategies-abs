@@ -1,4 +1,4 @@
-﻿// <copyright file="StrategyPreConditionExceptionTests.cs" company="Defra">
+// <copyright file="StrategyPreConditionExceptionTests.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 

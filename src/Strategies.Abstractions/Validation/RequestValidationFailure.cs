@@ -1,4 +1,4 @@
-﻿// <copyright file="RequestValidationFailure.cs" company="Defra">
+// <copyright file="RequestValidationFailure.cs" company="Defra">
 // Copyright (c) Defra. All rights reserved.
 // </copyright>
 
